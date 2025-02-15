@@ -19,19 +19,19 @@ graduate_list = [
 ]
 
 print("Welcome to GREETING_MAKER.COM!")
-what_greet = int(input("What kind of greeting card do you need? Enter 1 for Birthday, 2 for Investiture Ceremony, 3 for Graduation: "))
 name = input("Enter the name: ")
-if what_greet >=4:
-    print("enter a valid input")
+what_greet = int(input("What kind of greeting card do you need? Enter 1 for Birthday, 2 for Investiture Ceremony, 3 for Graduation: "))
 if what_greet == 1:
     age = int(input("What age is he/she turning: "))
-    extras = input("Do you want to tell her/him something? ")
+    extras = input("Tell her/him something?: ")
 elif what_greet == 2:
     role = input("what role is he/she?: ")
     extras = input("Tell her/him somthing: ")
 elif what_greet == 3:
-    milestone = input("What is he/she graduation from: ")
+    milestone = input("Where is he/she graduation from: ")
     extras = input("Tell her/him something: ")
+else:
+    print("Enter a valid input!")
 if what_greet == 1:
     def birthday_wish():
         greet = random.choice(birthday_lists)
@@ -41,7 +41,6 @@ if what_greet == 1:
         greeting += greet
         print(greeting)
     birthday_wish()
-    print("Thank you. Come back again!")
 elif what_greet == 2:
     def invest_wish():
         greet = random.choice(invest_list)
@@ -51,7 +50,6 @@ elif what_greet == 2:
         greeting += greet
         print(greeting)
     invest_wish()
-    print("Thank you. Come back again!")
 elif what_greet == 3:
     def graduate_wish():
         greet = random.choice(graduate_list)
@@ -61,4 +59,4 @@ elif what_greet == 3:
         greeting += greet
         print(greeting)
     graduate_wish()
-    print("thank you! come back again")
+print("thank you! come back again")
