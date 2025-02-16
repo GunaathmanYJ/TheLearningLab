@@ -1,0 +1,45 @@
+print("welcome to determinant calculator")
+what_det = int(input("Press 2 for 2x2 determinant and 3 for 3x3 determinant: "))
+if what_det == 2:
+    determinant_wanted = True
+    while determinant_wanted:
+        a1 = int(input("enter the first value: "))
+        a2 = int(input("enter the second value: "))
+        b1 = int(input("enter the third value: "))
+        b2 = int(input("enter the fourth value: "))
+        determinant_look = f'| {a1}  {b1} |'
+        determinant_look2= f'| {a2}  {b2} |'
+        print(determinant_look)
+        print(determinant_look2)
+        determinant_value = (a1 * b2) - (a2 * b1)
+        print(f'The answer for the given determinant is {determinant_value}.')
+        recalculating_det = input("Do you want to calculate another determinant? Type yes or no: ").lower()
+        if recalculating_det == "no":
+            determinant_wanted = False
+            print("Thank you. Come again later!")
+elif what_det == 3:
+    determinant_wanted = True
+    while determinant_wanted:
+        a1 = int(input("enter the first value: "))
+        a2 = int(input("enter the second value: "))
+        a3 = int(input("enter the third value: "))
+        b1 = int(input("enter the fourth value: "))
+        b2 = int(input("enter the fifth value: "))
+        b3 = int(input("enter the sixth value: "))
+        c1 = int(input("enter the seventh value: "))
+        c2 = int(input("enter the eighth value: "))
+        c3 = int(input("enter the ninth value: "))
+        determinant_look = f'| {a1} {b1} {c1}|'
+        determinant_look2 = f'|{a2} {b2} {c2}|'
+        determinant_look3 = f'|{a3} {b3} {c3}|'
+        print(determinant_look)
+        print(determinant_look2)
+        print(determinant_look3)
+        determinant_value = (a1 * (b2 * c3 - c2 * b3)) - (b1 * (a2 * c3 - c2 * a3)) + (c1 * (a2 * b3 - b2 * a3))
+        print(f'The answer for the given determinant is {determinant_value}.')
+        recalculating_det = input("Do you want to calculate another determinant? Type yes or no: ").lower()
+        if recalculating_det == "no":
+            determinant_wanted = False
+            print("Thank you. Come again later!")
+else:
+    print("enter a valid input!")
